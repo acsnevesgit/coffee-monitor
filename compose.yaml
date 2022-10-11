@@ -1,0 +1,9 @@
+services:
+  api:
+    build:
+      context: ./api
+    container_name: test-api
+    ports:
+    - 8080:8080
+    volumes:
+    - ./frontend:/static

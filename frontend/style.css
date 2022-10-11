@@ -1,0 +1,296 @@
+:root {
+  --colorBackground: #1b1b1b;
+  --colorCoffee: #c88c54;
+  --colorMessage: #ffff00;
+  --colorLabel: #cccccc;
+  --colorText: #e6e6e6;
+  --colorTitle: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--colorBackground);
+  color: var(--colorText);
+  font-size: 1em;
+  font-family: Verdana, sans-serif;
+  line-height: 1.5em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 2em 1em;
+  color: var(--colorTitle);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-family: montserrat;
+  -webkit-text-stroke: 1px var(--colorTitle);
+  text-shadow: 4px 4px 0px black;
+}
+
+img.coffee-mug {
+  display: none;
+}
+
+.content {
+  max-width: 960px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.custom-message {
+  display: flex;
+  height: 2em;
+  place-content: center;
+  align-items: center;
+  margin: 2em;
+  color: var(--colorMessage);
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.intro {
+  margin: 0 2em 2em;
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+.plot-container {
+  width: auto;
+  height: calc(130px + 2em + 15px);
+  margin: 1em 2em;
+}
+
+.plot-empty {
+  display: flex;
+  height: 100px;
+  width: calc(100% - 30px);
+  margin: 15px;
+  background-color: black;
+  border-radius: 0 50px 50px 0;
+}
+
+.plot-fill {
+  display: flex;
+  height: 100px;
+  width: 0;
+  justify-content: center;
+  transition: width 2s ease-in-out;
+  z-index: 5;
+  border: 2px solid var(--colorTitle);
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 0 2px 2px var(--colorText);
+}
+
+.plot-label {
+  display: flex;
+  position: relative;
+  margin: 1em 0.5em 0.5em 15px;
+  place-content: start;
+  text-align: center;
+  color: var(--colorLabel);
+}
+
+.plot-value {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--colorTitle);
+  text-shadow: 1px 1px 5px var(--colorBackground);
+}
+
+.plot-workload {
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.stand-out {
+  color: var(--colorCoffee);
+}
+
+/* ---------------------------- mediaqueries ---------------------------- */
+
+/* portrait */
+
+@media screen and (max-width: 370px) and (orientation: portrait) {
+
+  .plot-empty,
+  .plot-fill {
+    height: 75px;
+  }
+}
+
+@media screen and (min-height:739px) and (orientation: portrait) {
+
+  img.coffee-mug {
+    display: block;
+    width: 8em;
+    height: auto;
+    margin: auto;
+  }
+
+  .custom-message {
+    margin: 1em 1em 2em;
+  }
+}
+
+@media screen and (max-width:480px) and (max-height:768px) and (orientation: portrait) {
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .custom-message {
+    height: 1.5em;
+    margin: 2em 1em;
+  }
+
+  .plot-value {
+    font-size: 1.2em;
+  }
+}
+
+/* landscape */
+
+@media screen and (min-width:480px) and (min-height:320px) and (max-height:480px) and (orientation: landscape) {
+
+  h1 {
+    margin: 1em;
+  }
+
+  p.intro {
+    margin: 0 2em;
+    font-size: 0.9em;
+  }
+
+  .custom-message {
+    font-size: 1em;
+    height: 1.2em;
+    margin: 1em;
+  }
+
+  .plot-label {
+    font-size: 0.8em;
+  }
+
+  .plot-value {
+    font-size: 1.2em;
+  }
+
+  .plot-empty,
+  .plot-fill {
+    height: 85px;
+  }
+}
+
+@media screen and (min-width:480px) and (max-height:319px) and (orientation: landscape) {
+
+  .plot-empty,
+  .plot-fill {
+    height: 50px;
+  }
+}
+
+@media screen and (min-width:740px) and (min-height:480px) and (max-height:768px) and (orientation: landscape) {
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  p.intro {
+    margin: 0 2em;
+    font-size: 1.1em;
+  }
+
+  img.coffee-mug {
+    display: block;
+    width: 10em;
+    height: auto;
+    margin: auto;
+  }
+
+  .stand-out {
+    font-size: larger;
+  }
+}
+
+@media screen and (min-width:700px) and (max-width:740px) and (min-height:520px) and (max-height:560px) and (orientation: landscape) {
+
+  img.coffee-mug {
+    display: block;
+    width: 9em;
+    margin: 2em auto;
+  }
+
+  .plot-container {
+    height: calc(130px + 15px);
+  }
+
+  .stand-out {
+    font-size: larger;
+  }
+}
+
+@media screen and (min-width:768px) and (min-height:768px) and (orientation: landscape) {
+
+  h1 {
+    font-size: 2.5em;
+    margin: 2em 1em;
+  }
+
+  img.coffee-mug {
+    display: block;
+    width: 10em;
+    height: auto;
+    margin: auto;
+  }
+
+  .plot-label {
+    font-size: 1em;
+  }
+
+  .stand-out {
+    font-size: larger;
+  }
+}
+
+@media screen and (min-width:1000px) and (min-height:767px) and (orientation: landscape) {
+
+  p.intro {
+    font-size: 1.2em;
+  }
+
+  .plot-container {
+    height: calc(130px + 4em + 15px);
+  }
+
+  .custom-message {
+    height: 1.4em;
+    margin: 2em;
+    font-size: 1.4em;
+  }
+
+  img.coffee-mug {
+    display: block;
+    width: 9em;
+    height: auto;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width:1000px) and (min-height:900px) and (orientation: landscape) {
+
+  img.coffee-mug {
+    display: block;
+    width: 10em;
+    height: auto;
+    margin: auto;
+  }
+}

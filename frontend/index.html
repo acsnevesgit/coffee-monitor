@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Coffee Machine Monitoring</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1>SciLifeLab coffee monitor</h1>
+      <p class="intro">
+        This helpful plot summarizes data from SciLifeLabs <span class="stand-out">coffee machines</span> to
+        show their <span class="stand-out">workload</span> at any given moment!
+      </p>
+      <div class="custom-message">
+        <p class="text-message"></p>
+      </div>
+      <div class="plot-container">
+        <label class="plot-label">Level of coffee machine workload:</label>
+        <div class="plot plot-workload">
+          <div class="plot-empty">
+            <div class="plot-fill">
+              <div class="plot-value"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="static/images/coffee-mug.gif" class="coffee-mug" alt="coffee mug animation"/>
+    </div>
+  </body>
+  <script src="static/script.js"></script>
+</html>
