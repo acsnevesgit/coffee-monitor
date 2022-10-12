@@ -22,10 +22,10 @@ const getProductivity = () => {
     // if data is undefined or null, display error message
     if (!data) {
       document.getElementById("cuppy-disconnected").classList.add("cuppy-status-show");
-    };
-
-    updatePlot(plotFill, data);
-    document.querySelector(".plot-value").style.display = "flex";
+    } else {
+      updatePlot(plotFill, data);
+      document.querySelector(".plot-value").style.display = "flex";
+    }
 
     // if workload is less than 10% ---> not enough space to display the value inside the bar:
     if (data.productivity < 0.1) {

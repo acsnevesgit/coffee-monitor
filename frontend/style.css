@@ -13,9 +13,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--colorBackground);
-  /* background-image: url("https://i.pinimg.com/originals/2f/5d/7b/2f5d7b00da33c08689c0e67103ed9cd9.jpg");
-  background-size: contain; */
+  /* background-color: var(--colorBackground); */
+  background-image: url("https://i.pinimg.com/originals/2f/5d/7b/2f5d7b00da33c08689c0e67103ed9cd9.jpg");
+  background-size: contain;
   color: var(--colorLabel);
   font-size: 1em;
   font-family: Verdana, sans-serif;
