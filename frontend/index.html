@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Coffee Machine Monitoring</title>
+    <title>Cuppy Coffee Machine Monitor</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="static/style.css" />
   </head>
   <body>
     <div class="content">
-      <h1>SciLifeLab coffee monitor</h1>
+      <h1><span class="cuppy">Cuppy</span> Coffee Machine Monitor</h1>
       <p class="intro">
-        This helpful plot summarizes data from SciLifeLabs <span class="stand-out">coffee machines</span> to
+        This helpful plot summarizes data from <span class="stand-out">coffee machines</span> to
         show their <span class="stand-out">workload</span> at any given moment!
       </p>
-      <div class="custom-message">
-        <p class="text-message"></p>
-      </div>
       <div class="plot-container">
         <label class="plot-label">Level of coffee machine workload:</label>
         <div class="plot plot-workload">
@@ -26,7 +23,29 @@
           </div>
         </div>
       </div>
-      <img src="static/images/coffee-mug.gif" class="coffee-mug" alt="coffee mug animation"/>
+      <p class="intro center"><span class="cuppy">Cuppy</span> will help you by giving real-time workload status:</p>
+      <div class="cuppy-images">
+        <div class="cuppy-status" id="cuppy-off">
+          <img src="static/images/confused.png" class="coffee-cup" alt="coffee cup off"/>
+          <p class="center status">Off<span> coffee machine is off</span></p>
+        </div>
+        <div class="cuppy-status" id="cuppy-disconnected">
+          <img src="static/images/disconnected.png" class="coffee-cup" alt="coffee cup disconnected"/>
+          <p class="center status">Disconnected<span> monitoring is off</span></p>
+        </div>
+        <div class="cuppy-status" id="cuppy-happy">
+          <img src="static/images/happy.png" class="coffee-cup" alt="coffee cup happy"/>
+          <p class="center status">Happy<span> workload is normal</span></p>
+        </div>
+        <div class="cuppy-status" id="cuppy-tired">
+          <img src="static/images/tired.png" class="coffee-cup" alt="coffee cup tired"/>
+          <p class="center status">Overworked<span> workload is high (>80%)</span></p>
+        </div>
+        <div class="cuppy-status" id="cuppy-burnout">
+          <img src="static/images/burnout.png" class="coffee-cup" alt="coffee cup burnout"/>
+          <p class="center status">Burnout<span> workload is critical (>95%)</span></p>
+        </div>
+      </div>
     </div>
   </body>
   <script src="static/script.js"></script>

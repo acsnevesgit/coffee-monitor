@@ -1,8 +1,8 @@
-<h1>Coffee Monitor ☕</h1>
+<h1> <b>CUPPY</b> ☕ Coffee Machine Monitor</h1>
 
 <h2>Description</h2>
 
-This web app can be used to help monitor, analyze and manage the operations performance of a coffee machine. At the core it shows the current workload as a percentage bar. Additionally, it can display information about issues that could be affecting the workload, recommendations to potentially fix the issues and charts for analyzing performance and capacity history.
+This web app (well, <b>Cuppy</b>\*) will help you to monitor, analyze and manage the operations performance of a coffee machine. At the core it shows the current workload as a percentage bar. Additionally, it can display information about issues that could be affecting the workload, recommendations to potentially fix the issues and charts for analyzing performance and capacity history.
 
 The API used by the app is part of this repository and can be run locally.
 
@@ -18,3 +18,8 @@ The API used by the app is part of this repository and can be run locally.
 
 - Run `docker compose up` to build and run the test environment.
 - Go to `localhost:8080` in your browser to see the site.
+
+<div align="right">
+<img src="https://user-images.githubusercontent.com/94974740/195381475-70fa5047-7029-4b07-9fed-5754fc2dd947.png"  width="200" height="auto"/>
+<p> * [ - Hi! I'm <b>Cuppy</b> and I am here to help you. ] </p>
+</div>
